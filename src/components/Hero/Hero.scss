@@ -1,0 +1,39 @@
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.70)), url(../../images/welcomeImg.jpg) center center no-repeat ;
+    // background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../../images/welcomeImg.jpg) center center no-repeat ;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .heroTitle{
+        font-size: 2rem;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+    .heroName{
+        font-size: 7rem;
+        font-weight: bold;
+        text-shadow: 8px 8px 10px black;
+        float: left;
+    }
+    .heroSubtitle{
+        font-size: 3rem;
+        font-weight: 200;
+        animation: moveInBottom 1s ease-out 2.4s;
+        animation-fill-mode: backwards;
+    }
+
+    @media (max-width: 990px) {
+        .heroTitle{
+            font-size: 1.5rem;
+        }
+        .heroName{
+            font-size: 5rem;
+        }
+        .heroSubtitle{
+            font-size: 2rem;
+        }
+    }
+}
