@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './Contact.scss'
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <section className='contact' id='contact'>
+      Contact
+    </section>
   )
 }
 

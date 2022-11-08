@@ -12,62 +12,159 @@
         z-index: 3;
         color: rgb(107, 107, 107);
     }
+    .angle1{
+        animation: angle1 1500ms forwards;
+    }
+    .angle2{
+        opacity: 0;
+        animation: angle2 1500ms forwards;
+    }
     .slash{
         font-size: 50vh;
-        // font-weight: lighter;
         font-family: 'Times New Roman', Times, serif;
         transform:scaley(1.8);
         z-index: 3;
+        // color: #4ec9b0;
         color: rgb(107, 107, 107);
+        line-height: 50vh;
+        text-shadow: 10px 0px 10px#000;
+        margin-right: 2rem;
+        opacity: 0;
+        animation: slash 1500ms forwards;
     }
     .profile{
         width: 40%;
+        height: 100vh;
         text-align: right;
+        position: relative;
+        display: flex;
+        align-items: center;
         .profileImg{
-            width: 90%;
-            filter: drop-shadow(1px 1px 30px rgba(255, 255, 255, 0.286));
-            animation: profileImage 1500ms ease;
-            z-index: -1;
-            margin-right: -10%;
-            rotate: 10deg;
+            opacity: 0;
+            width: 70%;
+            rotate: -5deg;
+            filter: drop-shadow(-5px -5px 30px rgba(255, 255, 255, 0.286));
+            animation: profileImage 1500ms ease forwards;
+            position: absolute;
+        }
 
-        }
-        @keyframes profileImage {
-            from{
-                margin-right: -60%;
-                opacity: 0;
-            }
-            to{
-                margin-right: -10%;
-            }
-        }
     }
     .presentation{
         z-index: 0;
-        // background: linear-gradient(to right, rgb(107, 107, 107), #000);
-        background-color:#000;
-        // clip-path: polygon(100% 100%, 0% 100%, 13% 0%, 100% 0%);
         width: 50%;
         height: 85%;
         padding-left: 20px;
         .textGroup{
-            // background-color: #000;
-            // clip-path: polygon(100% 100%, 0% 100%, 13% 0%, 100% 0%);
             .presentationText{
                 margin-right: 15vw;
                 padding: .5rem 1rem .5rem 2rem;
-                transform: skewX(2);
-                width: 90%;
+                width: 80%;
                 line-height: 3rem;
                 font-size: 1.8rem;   
                 font-weight: normal; 
+                opacity: 0;
+                animation: profileImage 1500ms ease forwards;
             }
-            .signature{
-                position: absolute;
-                // text-align: center;
-                // padding-left: 10rem;
-            }
-        }        
+        }    
+        .signature{
+            z-index: 2;
+            position: relative;
+            bottom: 40px;
+            width: fit-content;
+            margin-left: 21rem;
+        }    
+    }
+    @keyframes angle1 {
+        25%{ 
+            position: absolute;
+            left: 50%;
+        }
+        50%{
+            position: absolute;
+            left: 40%;
+        }
+        75%{
+            left: 30%;
+        }
+        100%{
+            position: absolute;
+            left: 5%
+        }
     }
 
+    @keyframes angle2 {
+        25%{ 
+            opacity: 0;
+            position: absolute;
+            right: 50%;
+        }
+        50%{
+            opacity: 0;
+            position: absolute;
+            right: 40%;
+        }
+        75%{
+            opacity: 1;
+            right: 30%;
+        }
+        100%{
+            opacity: 1;
+            position: absolute;
+            right: 5%
+        }
+    }
+
+    @keyframes slash {
+        0%{ 
+            // display: none;
+            opacity: 0;
+            position: absolute;
+            left: 60%;
+            // margin-right: 0;
+        }
+        25%{ 
+            opacity: 0;
+            position: absolute;
+            left: 60%;
+            // margin-right: 0;
+        }
+
+        50%{
+            opacity: 1;
+            position: absolute;
+            left: 50%;
+            // margin-right: 20%;
+        }
+
+        75%{
+            opacity: 1;
+            left: 40%;
+        }
+        100%{
+            opacity: 1;
+            position: absolute;
+            left: 40%
+        }
+    }
+
+    @keyframes profileImage {
+        80%{
+            opacity: 0;
+        }
+        100%{
+            left: 21%;
+            opacity: 1;
+        }
+    }
+
+    @keyframes presentationText {
+        80%{
+            opacity: 0;
+        }
+        100%{
+            right: 35%;
+            opacity: 1;
+            color: red;
+        }
+    }
 }   

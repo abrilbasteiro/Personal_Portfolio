@@ -1,16 +1,12 @@
 header.headerBg{
     background-color: rgba(0, 0, 0, 0.6);
-    // background-color: rgba(29, 29, 29, 0.8);
     transition: 0.5s;
+    z-index: 5;
 }  
 .header{
     position: fixed;
     height: auto;
     width: 100%;
-    // background-color: transparent;
-    // background-color: rgba(29, 29, 29, 0.8);
-    // transition: .3s ease-in;
-    // overflow: hidden;
 
     .navbar{
         align-items: center;

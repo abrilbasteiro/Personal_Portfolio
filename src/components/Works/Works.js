@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './Works.scss'
 const Works = () => {
   return (
-    <div>Works</div>
+    <section className='works' id='works'>
+      Works
+    </section>
   )
 }
 
