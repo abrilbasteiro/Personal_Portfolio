@@ -4,14 +4,37 @@ import './Signature.scss'
 import avatar from '../../images/holaa1.png'
 
 const About = () => {
+    window.addEventListener('scroll', function(){
+        let angle1 = document.getElementById('angle1');
+        let angle2 = document.getElementById('angle2');
+        let slash = document.getElementById('slash');
+        let profileImg = document.getElementById('profileImg');
+        let presentationText = document.getElementsByClassName('presentationText');
+        let signature = document.getElementById('signature');
+        let positionAngle1 = angle1.getBoundingClientRect().top; 
+        let pantalla = this.window.innerHeight
+
+        if(positionAngle1 < pantalla*0.2){
+            angle1.style.animation = 'angle1 1500ms forwards';
+            angle2.style.animation = 'angle2 1500ms forwards';
+            slash.style.animation = 'slash 1500ms forwards';
+            profileImg.style.animation = 'profileImage 1500ms ease forwards';
+            for(let i=0; i<presentationText.length; i++){
+                presentationText[i].style.animation = 'profileImage 1500ms ease forwards';
+            };
+        }
+        if (positionAngle1 < 0){
+            signature.style.display = 'block';
+        }
+    })
 
     return (
     <section className='about' id='about'>
-        <p className="angle angle1">&#60;</p>
+        <p className="angle angle1" id='angle1'>&#60;</p>
         <div className="profile">
             <img src={avatar} alt="image" id='profileImg' className='profileImg' />
         </div>
-        <p className="slash">&#47;</p>
+        <p className="slash" id='slash'>&#47;</p>
         <div className="presentation">
             <div className="textGroup">    
                 <h3 className='presentationText'> 
@@ -43,7 +66,7 @@ const About = () => {
             </div>
         </div>    
 
-        <p className="angle angle2">&#62;</p>
+        <p className="angle angle2" id='angle2'>&#62;</p>
         {/* <p className="angle">&#60;</p>
 
         <div className="profile">

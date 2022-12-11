@@ -29,8 +29,7 @@ const Works = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}>
+        >
         <SwiperSlide className='worksSlide'>
           <a href="https://codepen.io/abrilbasteiro/pen/wvdEXQw" target="_blank" className="card worksCard w-100 shadow-1-strong mb-4">
             <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/wvdEXQw.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1628126281&width=960" alt="Card image cap"/>
