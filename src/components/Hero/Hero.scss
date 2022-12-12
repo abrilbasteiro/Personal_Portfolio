@@ -1,6 +1,5 @@
 .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.70)), url(../../images/welcomeImg.jpg) center center no-repeat ;
-    // background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../../images/welcomeImg.jpg) center center no-repeat ;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -21,10 +20,57 @@
     .heroSubtitle{
         font-size: 3rem;
         font-weight: 200;
-        animation: moveInBottom 1s ease-out 2.4s;
-        animation-fill-mode: backwards;
-    }
+        position: relative;
+        width: 15ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        animation: typing 2s steps(17) alternate,
+            blink 0.4s step-end infinite alternate;
+        animation-delay: 3s;
+        text-shadow: 0px 0px 3px black;
+        }
 
+        @keyframes typing {
+        from {
+            width: 0;
+        }
+        }
+    
+        @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+        }
+
+        
+
+        // &:before{
+        //     content:'';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: red;
+        //     border-left: 2px solid #eee;
+        //     animation: subtitleAnimation steps(17) 3000ms infinite;
+        // }
+        
+    // }
+
+    // @keyframes subtitleAnimation {
+    //     40%{
+    //         left: 100%;
+    //     } 
+    //     60% {
+    //         left: 100%;
+    //     }
+    //     100% {
+    //         left: 0%;
+    //     }
+    // }
+    
     @media (max-width: 990px) {
         .heroTitle{
             font-size: 1.5rem;
@@ -36,4 +82,11 @@
             font-size: 2rem;
         }
     }
+    // @media (max-width: 767px) {
+        // h1 {
+        //     font-size: 4vw;
+        // }
+        // .typing-text {
+        //     font-size: 8vw;
+        // }
 }
