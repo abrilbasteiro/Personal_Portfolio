@@ -16,61 +16,45 @@
         font-weight: bold;
         text-shadow: 8px 8px 10px black;
         float: left;
+
+        width: 7.5ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid transparent;
+        animation: typing 2s steps(17) alternate,
+            blink 0.4s step-end alternate;
     }
     .heroSubtitle{
         font-size: 3rem;
         font-weight: 200;
         position: relative;
+        opacity: 0;
         width: 15ch;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 3px solid;
-        animation: typing 2s steps(17) alternate,
+        border-right: 3px solid transparent;
+        animation: typing 2s steps(17) alternate forwards,
             blink 0.4s step-end infinite alternate;
         animation-delay: 3s;
         text-shadow: 0px 0px 3px black;
-        }
+    }
 
-        @keyframes typing {
+    @keyframes typing {
         from {
             width: 0;
+            opacity: 1;
         }
+        100%{
+            opacity: 1;
         }
-    
-        @keyframes blink {
+    }
+
+    @keyframes blink {
         50% {
-            border-color: transparent;
+            border-color: #eee;
         }
-        }
+    }
 
-        
-
-        // &:before{
-        //     content:'';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     height: 100%;
-        //     width: 100%;
-        //     background-color: red;
-        //     border-left: 2px solid #eee;
-        //     animation: subtitleAnimation steps(17) 3000ms infinite;
-        // }
-        
-    // }
-
-    // @keyframes subtitleAnimation {
-    //     40%{
-    //         left: 100%;
-    //     } 
-    //     60% {
-    //         left: 100%;
-    //     }
-    //     100% {
-    //         left: 0%;
-    //     }
-    // }
-    
     @media (max-width: 990px) {
         .heroTitle{
             font-size: 1.5rem;
@@ -82,11 +66,4 @@
             font-size: 2rem;
         }
     }
-    // @media (max-width: 767px) {
-        // h1 {
-        //     font-size: 4vw;
-        // }
-        // .typing-text {
-        //     font-size: 8vw;
-        // }
 }
