@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 120px 100px 100px;
     .angle{
         font-size: 30vh;
         font-weight: lighter;
@@ -53,15 +53,20 @@
     .presentation{
         z-index: 0;
         width: 50%;
-        height: 85%;
+        height: 100vh;
         padding-left: 20px;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
         .textGroup{
+            width: 90%;
+            
             .presentationText{
                 margin-right: 15vw;
                 padding: .5rem 1rem .5rem 2rem;
-                width: 80%;
+                width: 100%;
                 line-height: 3rem;
-                font-size: 1.8rem;   
+                font-size: 1.5rem;   
                 font-weight: normal; 
                 opacity: 0;
                 // animation: profileImage 1500ms ease forwards;
@@ -72,7 +77,7 @@
             position: relative;
             bottom: 40px;
             width: fit-content;
-            margin-left: 21rem;
+            margin-left: 20rem;
         }    
     }
     @keyframes angle1 {
