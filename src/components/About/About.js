@@ -43,7 +43,7 @@ const About = () => {
                     Since I discovered the passion for web development I have been in constant training to improve day by day.
                 </h3>
                 <h3 className='presentationText'>
-                    I hope you enjoy my work, thanks for your visit
+                    I hope you enjoy my work,<br/> thanks for your visit
                 </h3>
             </div>
             <div className="signature">
