@@ -1,40 +1,56 @@
 import React from 'react'
 import './Contact.scss'
 import { Button, Form } from 'react-bootstrap'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_b7vjmel', 'template_c3qdaxn', form.current, 'Q_94S1KW0s4XtmVKO')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <section className='contact' id='contact'>
         <h2>Let's work together!</h2>
         <h3>Leave me a message</h3>
 
-        <form className="row contactForm">
+        <form ref={form} className="row contactForm"  onSubmit={sendEmail}>
           <div className="formLeft col-6">
             <Form.Group className="mb-3" controlId='name'>
-              <Form.Control type="text" placeholder="Name" />
+              <Form.Control type="text" placeholder="Name" name='name'/>
             </Form.Group>
             <Form.Group className="mb-3" controlId='email'>
-              <Form.Control type="email" placeholder="Email" />
+              <Form.Control type="email" placeholder="Email" name='email'/>
             </Form.Group>
             <Form.Group className="mb-3" controlId='phone'>
-              <Form.Control type="tel" placeholder="Contact phone" />
+              <Form.Control type="tel" placeholder="Contact phone" name='phone'/>
             </Form.Group>
-            <Form.Group controlId="where">
+            <Form.Group controlId="foundIn">
               <Form.Label>Where did you find me?</Form.Label>
-              <Form.Control as="select" className='select'>
+              <Form.Control as="select" className='select' name='foundIn'>
                 <option key='blankChoice' hidden value>Please, select one</option>
-                <option>LinkedIn</option>
-                <option>ZonaJobs</option>
-                <option>Bumeran</option>
-                <option>Computrabajo</option>
-                <option>Other</option>
+                <option value='linkedIn'>LinkedIn</option>
+                <option value='zonaJobs'>ZonaJobs</option>
+                <option value='bumeran'>Bumeran</option>
+                <option value='computrabajo'>Computrabajo</option>
+                <option value='other'>Other</option>
               </Form.Control>
             </Form.Group>
           </div>
           <div className="formRight col-6">
             <Form.Group className="mb-3 formText" controlId="exampleForm.ControlTextarea1">
               <Form.Label>How can I help you?</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control as="textarea" rows={3} name='message' />
             </Form.Group>
             <Button variant="primary" type="submit" className='submitBtn'>
               Submit

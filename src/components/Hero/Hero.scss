@@ -59,7 +59,7 @@
             border-right: 3px solid transparent;
             animation: typing 2s steps(17) alternate forwards,
                 blink 0.4s step-end infinite alternate;
-            animation-delay: 9s;
+            animation-delay: 8s;
             text-shadow: 0px 0px 3px black;
 
     }
@@ -96,7 +96,6 @@
         60%{
             top: 0;
             right: 0;
-            // opacity: 0;
         }
         99%{
             top: 0;
