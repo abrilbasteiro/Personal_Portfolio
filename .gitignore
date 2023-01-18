@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+packcage-log.json
 
 # testing
 /coverage
