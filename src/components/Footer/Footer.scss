@@ -1,0 +1,21 @@
+.footerContainer{
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    p{
+        margin: 0;
+        padding-right: 50px;
+        border-right: 1px solid #fff;
+        font-style: italic;
+    }
+    .contactIcons{
+        padding-left: 50px;
+        font-size: 2rem;
+        line-height: 2rem;
+        .contactIcon{
+            margin-right: 40px;
+        }
+    }
+}
