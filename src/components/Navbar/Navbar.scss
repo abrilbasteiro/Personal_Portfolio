@@ -16,6 +16,9 @@ header.headerBg{
             width: 70px;
             margin-left: 20px;
             opacity: .7;
+            &:hover{
+                transform: scale(1.1)
+            }
         }
         .navbar-nav{
             margin-right: 30px;
