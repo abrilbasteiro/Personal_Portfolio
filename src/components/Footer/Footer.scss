@@ -16,6 +16,23 @@
         line-height: 2rem;
         .contactIcon{
             margin-right: 40px;
+            &:hover *{
+                color: #75f4b6;
+            }
+        }
+    }
+    .whatsappBtn{
+        height: auto;
+        z-index: 5;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        .whatsappIcon{ 
+        width: 4rem;
+            &:hover{
+                transform: rotate(360deg);
+                transition: .3s;
+            }
         }
     }
 }

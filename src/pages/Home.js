@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import Hero from '../components/Hero/Hero'
-import About from '../components/About/About'
-import Works from '../components/Works/Works'
-import Contact from '../components/Contact/Contact'
+import Hero from '../sections/HeroSection/Hero'
+import About from '../sections/AboutSection/About'
+import Works from '../sections/WorksSection/Works'
+import Contact from '../sections/ContactSection/Contact'
 import Footer from '../components/Footer/Footer'
+import Skills from '../sections/SkillsSection/Skills'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar/>
       <Hero/>
       <About/>
+      <Skills/>
       <Works/>
       <Contact/>
       <Footer/>
