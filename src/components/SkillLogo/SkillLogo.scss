@@ -1,0 +1,11 @@
+.cardContainer{
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    .skillLogo{
+        width: 100%;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
