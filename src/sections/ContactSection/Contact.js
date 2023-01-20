@@ -3,6 +3,7 @@ import './Contact.scss'
 import { Button, Form } from 'react-bootstrap'
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import swal from 'sweetalert'
 
 const Contact = () => {
   const form = useRef()
@@ -11,8 +12,12 @@ const Contact = () => {
     e.preventDefault();
     emailjs.sendForm('service_b7vjmel', 'template_c3qdaxn', form.current, 'Q_94S1KW0s4XtmVKO')
       .then((result) => {
-          console.log(result.text);
-      }, (error) => {
+        swal({
+          title: 'Your message has been sent successfully', 
+          text: 'I will answer you promptly',
+          icon: 'success',
+          button: 'OK'})
+    }, (error) => {
           console.log(error.text);
       });
   };
