@@ -4,7 +4,7 @@ import { GiArrowCursor } from 'react-icons/gi'
 
 const Hero = () => {
   return (
-    <section className='heroSection' id='hero'>
+    <section className='heroSection d-flex justify-content-center align-items-center' id='hero'>
           <div className='welcome'>
             <p className='heroTitle'>&#45; Welcome! &#45;</p>
             <p className='closeBtn'>X</p>

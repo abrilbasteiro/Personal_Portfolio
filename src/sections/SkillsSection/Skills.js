@@ -6,8 +6,6 @@ import skillsLogos from '../../images/skills'
 const Skills = () => {
   const skillsTitles = [];
   const skillsSrcs = []
-
-
   
   const getSkills = () => {
     for (const skill in skillsLogos) {

@@ -2,14 +2,13 @@ import React from 'react'
 import './Works.scss'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
-// import { Navigation, EffectFade, Scrollbar } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
 const Works = () => {
   return (
-    <section className='works' id='works'>
+    <section className='works d-flex justify-content-center align-items-center' id='works'>
       <h1 className='worksTitle'>These are some of my proyects</h1>
       <Swiper className="worksContainer" 
         modules={[EffectCoverflow, Pagination, Autoplay]}
@@ -103,50 +102,6 @@ const Works = () => {
             </a>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="row worksContainer">
-        <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 worksColumn">
-            <a href="https://codepen.io/abrilbasteiro/details/gORONRy" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/gORONRy.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1629821506&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">Omnifood Responsive Web</p>
-              </div>
-            </a>
-            <a href="https://codepen.io/abrilbasteiro/pen/wvdEXQw" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/wvdEXQw.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1628126281&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">FlexBox</p>
-              </div>
-            </a>
-        </div>
-        <div className="col-lg-4 mb-4 mb-lg-0 worksColumn">
-            <a href="https://codepen.io/abrilbasteiro/pen/qBjBmmq" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/qBjBmmq.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1629746811&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">Survey Form</p>
-              </div>
-            </a>
-            <a href="https://codepen.io/abrilbasteiro/pen/VwWwbpW" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/VwWwbpW.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1629746672&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">FlexBox</p>
-              </div>
-            </a>
-        </div>
-        <div className="col-lg-4 mb-4 mb-lg-0 worksColumn">
-            <a href="https://codepen.io/abrilbasteiro/pen/QWgWvGz" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/QWgWvGz.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1629746485&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">Tribute Page</p>
-              </div>
-            </a>
-            <a href="https://codepen.io/abrilbasteiro/pen/RwgwVKj" target="_blank" className="card worksCard w-100 shadow-1-strong rounded mb-4">
-              <img className="card-img-top worksImg" src="https://assets.codepen.io/6686467/internal/screenshots/pens/RwgwVKj.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1629746537&width=960" alt="Card image cap"/>
-              <div className="card-body">
-                <p className="card-text">Tecnical Documentation Page</p>
-              </div>
-            </a>
-        </div>
-      </div> */}
     </section>
   )
 }

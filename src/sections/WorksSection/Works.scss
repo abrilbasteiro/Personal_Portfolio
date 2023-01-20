@@ -1,9 +1,6 @@
 .works{
     background-color: rgb(10, 10, 10);
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     .worksTitle{
         font-size: 3rem;
         font-weight: lighter;
@@ -15,7 +12,6 @@
         .swiper-slide-active{
             filter: brightness(120%);
         }
-    
         .swiper-slide-active:hover img,
         .swiper-slide-active:hover .card-body{
             filter: blur(4px);

@@ -2,11 +2,10 @@ import React from 'react'
 import './Footer.scss'
 import { IoMailOutline, IoLogoGithub } from 'react-icons/io5'
 import { FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
-// import { IoLogoWhatsapp } from 'react-icons/io'
 import  WhatsappIcon  from '../../images/whatsapp.png'
 const Footer = () => {
   return (
-    <footer className='footerContainer'>
+    <footer className='footerContainer d-flex justify-content-center align-items-center'>
             <p>Abril Basteiro - 2023</p>
             <div className="contactIcons">
                 <a href="https://www.linkedin.com/in/abrilbasteiro/" target="_blank">
