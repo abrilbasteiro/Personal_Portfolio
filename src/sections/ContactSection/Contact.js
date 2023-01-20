@@ -17,9 +17,7 @@ const Contact = () => {
           text: 'I will answer you promptly',
           icon: 'success',
           button: 'OK'})
-        console.log(result.text);
     }, (error) => {
-      }, (error) => {
           console.log(error.text);
       });
   };
