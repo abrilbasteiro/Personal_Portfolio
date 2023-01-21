@@ -16,6 +16,7 @@ header.headerBg{
             width: 70px;
             margin-left: 20px;
             opacity: .7;
+            cursor: pointer;
             &:hover{
                 transform: scale(1.1)
             }
@@ -29,6 +30,7 @@ header.headerBg{
             .nav-link{
                 color: #f3f3f3;
                 border-bottom: solid 2px transparent;
+                cursor: pointer;
                 &:hover{
                     border-bottom: solid 2px green;
                 }
