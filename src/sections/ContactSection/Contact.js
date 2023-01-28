@@ -30,17 +30,17 @@ const Contact = () => {
         <form ref={form} className="row contactForm"  onSubmit={sendEmail}>
           <div className="formLeft col-6">
             <Form.Group className="mb-3" controlId='name'>
-              <Form.Control type="text" placeholder="Name" name='name'/>
+              <Form.Control type="text" placeholder="Name" name='name' required/>
             </Form.Group>
             <Form.Group className="mb-3" controlId='email'>
-              <Form.Control type="email" placeholder="Email" name='email'/>
+              <Form.Control type="email" placeholder="Email" name='email' required/>
             </Form.Group>
             <Form.Group className="mb-3" controlId='phone'>
-              <Form.Control type="tel" placeholder="Contact phone" name='phone'/>
+              <Form.Control type="tel" placeholder="Contact phone" name='phone' required/>
             </Form.Group>
             <Form.Group controlId="foundIn">
               <Form.Label>Where did you find me?</Form.Label>
-              <Form.Control as="select" className='select' name='foundIn'>
+              <Form.Control as="select" className='select' name='foundIn' required>
                 <option key='blankChoice' hidden value>Please, select one</option>
                 <option value='linkedIn'>LinkedIn</option>
                 <option value='zonaJobs'>ZonaJobs</option>
@@ -53,7 +53,7 @@ const Contact = () => {
           <div className="formRight col-6">
             <Form.Group className="mb-3 formText" controlId="exampleForm.ControlTextarea1">
               <Form.Label>How can I help you?</Form.Label>
-              <Form.Control as="textarea" rows={3} name='message' />
+              <Form.Control as="textarea" rows={3} name='message' required />
             </Form.Group>
             <Button variant="primary" type="submit" className='submitBtn'>
               Submit
